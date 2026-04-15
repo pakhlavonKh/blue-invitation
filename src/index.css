@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 220 20% 25%;
+
+    --card: 40 30% 97%;
+    --card-foreground: 220 20% 25%;
+
+    --popover: 40 30% 97%;
+    --popover-foreground: 220 20% 25%;
+
+    --primary: 213 45% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 25% 92%;
+    --secondary-foreground: 220 20% 25%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 213 35% 70%;
+    --accent-foreground: 220 20% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 213 25% 85%;
+    --input: 213 25% 85%;
+    --ring: 213 45% 55%;
+
+    --radius: 0.5rem;
+
+    --wedding-cream: 40 33% 96%;
+    --wedding-gold: 38 60% 55%;
+    --wedding-blue: 213 45% 55%;
+    --wedding-blue-light: 213 40% 85%;
+    --wedding-blue-pale: 213 35% 93%;
+    --wedding-text: 220 20% 30%;
+    --wedding-text-light: 220 10% 50%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .font-serif-wedding {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-sans-wedding {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .wedding-section {
+    @apply w-full max-w-lg mx-auto px-6 py-12;
+  }
+
+  .wedding-heading {
+    font-family: 'Cormorant Garamond', serif;
+    @apply text-3xl md:text-4xl font-light tracking-wide;
+    color: hsl(var(--wedding-text));
+  }
+
+  .wedding-subheading {
+    font-family: 'Cormorant Garamond', serif;
+    @apply text-xl md:text-2xl font-light italic;
+    color: hsl(var(--wedding-text-light));
+  }
+
+  .wedding-body {
+    font-family: 'Montserrat', sans-serif;
+    @apply text-sm font-light leading-relaxed;
+    color: hsl(var(--wedding-text));
+  }
+
+  .wedding-divider {
+    @apply w-16 h-px mx-auto my-8;
+    background: hsl(var(--wedding-gold));
+  }
+
+  .wedding-button {
+    font-family: 'Montserrat', sans-serif;
+    @apply inline-block px-8 py-3 text-xs tracking-[0.2em] uppercase font-medium rounded-sm transition-all duration-300;
+    background: hsl(var(--wedding-blue));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .wedding-button:hover {
+    background: hsl(213 45% 45%);
+  }
+
+  .calendar-cell {
+    @apply w-9 h-9 flex items-center justify-center text-sm font-light;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .calendar-cell-active {
+    @apply rounded-full;
+    background: hsl(var(--wedding-blue));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .timeline-dot {
+    @apply w-3 h-3 rounded-full border-2 flex-shrink-0;
+    border-color: hsl(var(--wedding-blue));
+    background: hsl(var(--wedding-cream));
+  }
+
+  .timeline-line {
+    @apply w-px flex-shrink-0;
+    background: hsl(var(--wedding-blue-light));
+  }
+}
