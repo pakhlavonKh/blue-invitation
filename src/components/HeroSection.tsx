@@ -8,7 +8,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-[#faf7f5]">
+    <section className="relative min-h-screen h-screen flex items-center overflow-hidden bg-[#faf7f5]">
 
       {/* BACKGROUND LAYER */}
       <div className="absolute inset-0 -z-10">
